@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:intl/intl.dart';
 import 'package:weather_forecast/state_management/current_tem_state.dart';
+import 'package:weather_forecast/ui/current_weather/min_tem.dart';
 //import 'package:weather_forecast/ui/current_weather/cur_forecast.dart';
 import 'package:weather_forecast/ui/current_weather/weather_info.dart';
 import 'package:weather_forecast/ui/forecast/nexthome.dart';
@@ -34,7 +35,7 @@ class HomePage extends ConsumerWidget {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 const Center(
                   child: Text(
@@ -58,13 +59,20 @@ class HomePage extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 10,
                 ),
                 Text(
-                  (data.temp - 273).toStringAsFixed(2).toString(),
+                  '${(data.temp - 273).toStringAsFixed(2).toString()}°C',
                   style: const TextStyle(
-                    fontSize: 50,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  ' Feels like:  ${(data.feels_like - 273).toStringAsFixed(2).toString()}°C',
+                  style: const TextStyle(
+                    fontSize: 20,
                     color: Colors.white,
                   ),
                 ),
@@ -135,6 +143,21 @@ class HomePage extends ConsumerWidget {
                 const SizedBox(
                   height: 15,
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TempInfo(
+                      temp:
+                          '${(data.temp_min - 273).toStringAsFixed(1).toString()}°C',
+                      text: 'Minimum Temperature',
+                    ),
+                    TempInfo(
+                      temp:
+                          '${(data.temp_max - 273).toStringAsFixed(1).toString()}°C',
+                      text: 'Maximum Temperature',
+                    )
+                  ],
+                )
               ],
             ),
           ),
