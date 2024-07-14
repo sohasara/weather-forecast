@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:weather_forecast/state_management/current_tem_state.dart';
 import 'package:weather_forecast/ui/current_weather/min_tem.dart';
-//import 'package:weather_forecast/ui/current_weather/cur_forecast.dart';
+
 import 'package:weather_forecast/ui/current_weather/weather_info.dart';
 import 'package:weather_forecast/ui/forecast/nexthome.dart';
 
@@ -149,12 +149,12 @@ class HomePage extends ConsumerWidget {
                     TempInfo(
                       temp:
                           '${(data.temp_min - 273).toStringAsFixed(1).toString()}°C',
-                      text: 'Minimum Temperature',
+                      text: 'Minimum',
                     ),
                     TempInfo(
                       temp:
                           '${(data.temp_max - 273).toStringAsFixed(1).toString()}°C',
-                      text: 'Maximum Temperature',
+                      text: 'Maximum',
                     )
                   ],
                 )

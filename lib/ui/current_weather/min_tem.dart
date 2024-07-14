@@ -14,24 +14,31 @@ class TempInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 165,
-      width: 160,
-      padding: const EdgeInsets.all(10),
+      width: 155,
+      padding: const EdgeInsets.only(
+        top: 28,
+      ),
       decoration: BoxDecoration(
         color: const Color.fromRGBO(60, 10, 115, 1),
         borderRadius: BorderRadius.circular(25),
       ),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 15.0,
-              top: 18,
-            ),
+          Center(
             child: Text(
               text,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 20,
+                fontSize: 18,
+              ),
+            ),
+          ),
+          const Center(
+            child: Text(
+              'Temp',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
               ),
             ),
           ),
@@ -43,7 +50,7 @@ class TempInfo extends StatelessWidget {
             style: const TextStyle(
               color: Colors.white,
               fontSize: 25,
-              fontWeight: FontWeight.w900,
+              fontWeight: FontWeight.bold,
             ),
           )
         ],
