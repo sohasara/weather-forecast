@@ -74,18 +74,26 @@ class HomePage extends ConsumerWidget {
                 Container(
                   padding: const EdgeInsets.all(10),
                   height: 120,
-                  width: 400,
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     color: const Color.fromRGBO(60, 10, 115, 1),
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      WeatherInfo(icon: Icons.umbrella, lebel: '22%Rain'),
-                      WeatherInfo(icon: Icons.air, lebel: '12 km/h Wind'),
                       WeatherInfo(
-                          icon: Icons.water_drop, lebel: '18% Humidity'),
+                        icon: Icons.upcoming,
+                        lebel: '${data.pressure.toString()} pressure',
+                      ),
+                      WeatherInfo(
+                        icon: Icons.air,
+                        lebel: '${data.speed.toString()}Km/h Wind',
+                      ),
+                      WeatherInfo(
+                        icon: Icons.water_drop,
+                        lebel: '${data.humidity.toString()}% Humidity',
+                      ),
                     ],
                   ),
                 ),

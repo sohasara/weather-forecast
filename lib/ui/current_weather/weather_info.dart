@@ -30,7 +30,7 @@ class WeatherInfo extends StatelessWidget {
           lebel,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 16,
+            fontSize: 15,
           ),
         ),
       ],
