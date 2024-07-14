@@ -45,12 +45,11 @@ class HomePage extends ConsumerWidget {
                     ),
                   ),
                 ),
-                // const Icon(
-                //   Icons.wb_cloudy,
-                //   size: 160,
-                //   color: Colors.white,
-                // ),
-                Image.file(),
+                const Icon(
+                  Icons.wb_cloudy,
+                  size: 160,
+                  color: Colors.white,
+                ),
                 Text(
                   formattedDate,
                   style: const TextStyle(
