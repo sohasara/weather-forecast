@@ -7,6 +7,7 @@ import 'package:weather_forecast/ui/current_weather/min_tem.dart';
 
 import 'package:weather_forecast/ui/current_weather/weather_info.dart';
 import 'package:weather_forecast/ui/forecast/nexthome.dart';
+import 'package:weather_forecast/ui/hourlyfor.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -113,11 +114,21 @@ class HomePage extends ConsumerWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'Today',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ForeCast(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          'Today',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       GestureDetector(

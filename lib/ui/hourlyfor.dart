@@ -11,6 +11,7 @@ class Hourly extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 165,
+      width: 150,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: const Color.fromRGBO(60, 10, 115, 1),
@@ -54,6 +55,7 @@ class ForeCast extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final refProvider = ref.watch(forecastProvider);
     return Scaffold(
+      appBar: AppBar(),
       body: refProvider.when(
         data: (data) {
           return ListView.builder(
