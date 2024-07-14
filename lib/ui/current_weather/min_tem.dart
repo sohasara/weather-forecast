@@ -35,7 +35,7 @@ class TempInfo extends StatelessWidget {
           ),
           const Center(
             child: Text(
-              'Temp',
+              'Temperature',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 18,

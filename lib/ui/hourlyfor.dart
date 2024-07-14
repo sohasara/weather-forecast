@@ -31,14 +31,14 @@ class Hourly extends StatelessWidget {
           const Icon(
             Icons.cloud,
             color: Colors.white,
-            size: 50,
+            size: 70,
           ),
           Center(
             child: Text(
-              temp,
+              '$temp °C',
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: 25,
               ),
             ),
           ),

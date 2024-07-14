@@ -124,7 +124,7 @@ class HomePage extends ConsumerWidget {
                           );
                         },
                         child: const Text(
-                          'Today',
+                          'Today\'s ForeCast',
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.white,
@@ -160,12 +160,12 @@ class HomePage extends ConsumerWidget {
                     TempInfo(
                       temp:
                           '${(data.temp_min - 273).toStringAsFixed(1).toString()}°C',
-                      text: 'Minimum',
+                      text: 'Min',
                     ),
                     TempInfo(
                       temp:
                           '${(data.temp_max - 273).toStringAsFixed(1).toString()}°C',
-                      text: 'Maximum',
+                      text: 'Max',
                     )
                   ],
                 )
