@@ -12,7 +12,7 @@ class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context, ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final weatherP = ref.watch(WeatherProvider);
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('hh:mm a, EEEE, d MMMM').format(now);
