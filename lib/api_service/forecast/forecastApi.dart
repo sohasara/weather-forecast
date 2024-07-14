@@ -17,12 +17,10 @@ class ForeCastAPI {
 
       List<HourlyForecast> hourlyForecasts = [];
       for (int i = 0; i < times.length; i++) {
-        if (times[i].startsWith("2024-07-14") && i % 2 == 0) {
-          hourlyForecasts.add(HourlyForecast(
-            time: times[i],
-            temperature: temperatures[i],
-          ));
-        }
+        hourlyForecasts.add(HourlyForecast(
+          time: times[i],
+          temperature: temperatures[i],
+        ));
       }
 
       return hourlyForecasts;
