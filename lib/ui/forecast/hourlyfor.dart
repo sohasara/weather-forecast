@@ -32,10 +32,16 @@ class Hourly extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             const Icon(
               Icons.cloud,
               color: Colors.white,
-              size: 70,
+              size: 80,
+            ),
+            const SizedBox(
+              height: 15,
             ),
             Center(
               child: Text(
