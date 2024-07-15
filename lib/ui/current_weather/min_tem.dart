@@ -13,7 +13,7 @@ class TempInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 165,
+      height: 170,
       width: 155,
       padding: const EdgeInsets.only(
         top: 28,

@@ -25,7 +25,7 @@ class ForeCastAPI {
         String forecastDateString =
             DateFormat('yyyy-MM-dd').format(forecastDate);
 
-        if (forecastDateString == todayDate) {
+        if (forecastDateString == todayDate && i % 2 == 0) {
           hourlyForecasts.add(HourlyForecast(
             time: times[i],
             temperature: temperatures[i],
