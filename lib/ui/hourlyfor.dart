@@ -55,7 +55,10 @@ class ForeCast extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final refProvider = ref.watch(forecastProvider);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Hourly ForeCast'),
+        centerTitle: true,
+      ),
       body: refProvider.when(
         data: (data) {
           return ListView.builder(
