@@ -24,29 +24,26 @@ class ForeCast extends ConsumerWidget {
         scrollDirection: Axis.vertical,
         child: refProvider.when(
           data: (data) {
-            return GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                childAspectRatio: 0.8,
+            return Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 15,
+                  mainAxisSpacing: 15,
+                  childAspectRatio: 0.8,
+                ),
+                itemCount: data.length,
+                itemBuilder: (context, index) {
+                  final hourly = data[index];
+                  return Hourly(
+                    temp: hourly.temperature.toString(),
+                    time: hourly.time,
+                  );
+                },
               ),
-              itemCount: data.length,
-              itemBuilder: (context, index) {
-                final hourly = data[index];
-                return Padding(
-                    padding: const EdgeInsets.only(
-                      left: 10,
-                      right: 8,
-                      bottom: 8,
-                    ),
-                    child: Hourly(
-                      temp: hourly.temperature.toString(),
-                      time: hourly.time,
-                    ));
-              },
             );
           },
           error: (error, stack) {

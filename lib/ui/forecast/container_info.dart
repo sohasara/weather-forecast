@@ -43,7 +43,7 @@ class Hourly extends StatelessWidget {
             ),
             Center(
               child: Text(
-                '$temp °C',
+                '$temp° C',
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 25,
