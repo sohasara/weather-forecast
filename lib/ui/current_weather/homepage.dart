@@ -6,7 +6,7 @@ import 'package:weather_forecast/state_management/current_tem_state.dart';
 import 'package:weather_forecast/ui/current_weather/min_tem.dart';
 
 import 'package:weather_forecast/ui/current_weather/weather_info.dart';
-import 'package:weather_forecast/ui/forecast/nexthome.dart';
+
 import 'package:weather_forecast/ui/hourlyfor.dart';
 
 class HomePage extends ConsumerWidget {
@@ -131,21 +131,11 @@ class HomePage extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const NextPage(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          'Next 7 Day>',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.white,
-                          ),
+                      const Text(
+                        'Next 7 Day>',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
                         ),
                       ),
                     ],
