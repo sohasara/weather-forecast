@@ -6,6 +6,7 @@ import 'package:weather_forecast/state_management/current_tem_state.dart';
 import 'package:weather_forecast/ui/current_weather/min_tem.dart';
 
 import 'package:weather_forecast/ui/current_weather/weather_info.dart';
+import 'package:weather_forecast/ui/forecast/container_info.dart';
 
 import 'package:weather_forecast/ui/forecast/hourlyfor.dart';
 
